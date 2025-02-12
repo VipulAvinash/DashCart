@@ -23,7 +23,7 @@ app.post("/register",async (req,resp)=>{
    //    {
    //       resp.send({result: "Something went wrong, Please try again later"})
    //    }
-      resp.send({result,auth: token});
+      resp.send({result});
    //})
 })
 app.post("/login",async (req,resp)=>{
