@@ -9,12 +9,12 @@ const ProductList =()=>{
     },[])
 
     const getProducts=async ()=>{
-        let result = await fetch('http://localhost:5000/products');
+        let result = await fetch('https://dashcart.onrender.com/products');
         result = await  result.json();
         setProducts(result);
     }
         const deleteProduct = async (id)=>{
-           let result = await fetch(`http://localhost:5000/product/${id}`,
+           let result = await fetch(`https://dashcart.onrender.com/product/${id}`,
             {
                 method: "Delete",
             });
@@ -30,7 +30,7 @@ const ProductList =()=>{
             let key = event.target.value;
             if(key)
             {
-                let result = await fetch(`http://localhost:5000/search/${key}`);
+                let result = await fetch(`https://dashcart.onrender.com/search/${key}`);
                 result = await result.json();
                 if(result)
                 {
