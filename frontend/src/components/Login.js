@@ -14,7 +14,7 @@ const Login =()=>{
     },[])
     const handleLogin = async()=>{
         console.warn("email,password",email,password)
-        let result = await fetch("http://localhost:5000/login",{
+        let result = await fetch("https://dashcart.onrender.com/login",{
             method :'post',
             body : JSON.stringify({email,password}),
             headers:{
